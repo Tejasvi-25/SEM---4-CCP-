@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sepsis Monitoring Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Sepsis Monitoring System</h1>
+
+  <div class="dashboard">
+    <div class="card">
+      Heart Rate
+      <span class="value" id="hr">--</span>
+    </div>
+
+    <div class="card">
+      SpO₂
+      <span class="value" id="spo2">--</span>
+    </div>
+
+    <div class="card">
+      Temperature (°C)
+      <span class="value" id="temp">--</span>
+    </div>
+
+    <div class="card">
+      ECG
+      <span class="value" id="ecg">--</span>
+    </div>
+  </div>
+
+  <div class="alert normal" id="alert">
+    Status: NORMAL
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
