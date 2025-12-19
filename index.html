@@ -4,36 +4,33 @@
   <meta charset="UTF-8">
   <title>Sepsis Monitoring Dashboard</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
   <h1>Sepsis Monitoring System</h1>
 
   <div class="dashboard">
-    <div class="card">
-      Heart Rate
-      <span class="value" id="hr">--</span>
-    </div>
-
-    <div class="card">
-      SpO₂
-      <span class="value" id="spo2">--</span>
-    </div>
-
-    <div class="card">
-      Temperature (°C)
-      <span class="value" id="temp">--</span>
-    </div>
-
-    <div class="card">
-      ECG
-      <span class="value" id="ecg">--</span>
-    </div>
+    <div class="card">Heart Rate <span class="value" id="hr">--</span></div>
+    <div class="card">SpO₂ <span class="value" id="spo2">--</span></div>
+    <div class="card">Temperature (°C) <span class="value" id="temp">--</span></div>
+    <div class="card">ECG <span class="value" id="ecg">--</span></div>
   </div>
 
-  <div class="alert normal" id="alert">
-    Status: NORMAL
-  </div>
+  <div class="alert normal" id="alert">Status: NORMAL</div>
+
+  <h2>Live Vital Graph</h2>
+  <canvas id="vitalChart"></canvas>
+
+  <h2>Sepsis Detection Log</h2>
+  <table id="logTable">
+    <tr>
+      <th>Time</th>
+      <th>Status</th>
+    </tr>
+  </table>
 
   <script src="script.js"></script>
 </body>
